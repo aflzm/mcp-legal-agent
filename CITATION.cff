@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "MCP Legal Agent: A Controllable Legal-Retrieval Agent with Stateless MCP Tools"
+abstract: >-
+  A controllable legal-retrieval agent that links a case fact to the statutes
+  that plausibly apply. Retrieval is hybrid (BM25 + vector recall fused with
+  Reciprocal Rank Fusion); every candidate is verified against the original fact
+  before it can appear in the answer, and the agent abstains when evidence is
+  insufficient. The retrieval-and-verification tool is stateless and is callable
+  both directly and over the Model Context Protocol (MCP) stdio transport.
+authors:
+  - name: "MCP Legal Agent contributors"
+type: software
+license: MIT
+version: 1.0.0
+date-released: 2026-10-12
+repository-code: "https://github.com/<you>/mcp-legal-agent"
+keywords:
+  - legal retrieval
+  - model context protocol
+  - mcp
+  - retrieval-augmented generation
+  - hybrid retrieval
+  - reciprocal rank fusion
+  - grounded generation

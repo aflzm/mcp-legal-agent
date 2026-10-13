@@ -1,0 +1,17 @@
+flowchart TD
+    A["User Case Input"] --> B["Agent Harness"]
+    B --> C["Before Action Hook"]
+    C --> D["Budget and Deduplication"]
+    D --> E["Stateless MCP Tool"]
+    E --> F["Keyword Retrieval (BM25)"]
+    E --> G["Vector Retrieval (Qwen Embedding and Chroma)"]
+    F --> H["Reciprocal Rank Fusion"]
+    G --> H
+    H --> I["Candidate Evaluator"]
+    I --> J["Strong, Partial, and Miss"]
+    J --> K["After Tool Call Hook"]
+    K --> L["Evidence Memory and Trace"]
+    L --> M{"Stop Decision"}
+    M -->|Continue| C
+    M -->|Stop| N["Grounded Output"]
+    N --> O["Exact Match Evaluation"]

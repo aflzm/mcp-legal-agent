@@ -1,0 +1,1 @@
+"""Controlled legal retrieval agent."""
